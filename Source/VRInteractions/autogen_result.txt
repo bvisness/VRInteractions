@@ -1,0 +1,644 @@
+//==============================================================================
+// Hand Headers
+//==============================================================================
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton1Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton1Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton2Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton2Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton3Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton3Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton4Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton4Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton5Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton5Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton6Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton6Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton7Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton7Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton8Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void FaceButton8Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void Grip1Axis(float AxisValue);
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void Grip1Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void Grip1Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void Grip2Axis(float AxisValue);
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void Grip2Pressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void Grip2Released();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ShoulderPressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ShoulderReleased();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickPressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickReleased();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickDownPressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickDownReleased();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickLeftPressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickLeftReleased();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickRightPressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickRightReleased();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickUpPressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickUpReleased();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickX(float AxisValue);
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void ThumbstickY(float AxisValue);
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void TriggerPressed();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void TriggerReleased();
+
+UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+void TriggerAxis(float AxisValue);
+
+//==============================================================================
+// Hand Input Bindings
+//==============================================================================
+
+if (MotionController->Hand == EControllerHand::Left) {
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton1, EInputEvent::IE_Pressed, this, &UHand::FaceButton1Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton1, EInputEvent::IE_Released, this, &UHand::FaceButton1Released);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton2, EInputEvent::IE_Pressed, this, &UHand::FaceButton2Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton2, EInputEvent::IE_Released, this, &UHand::FaceButton2Released);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton3, EInputEvent::IE_Pressed, this, &UHand::FaceButton3Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton3, EInputEvent::IE_Released, this, &UHand::FaceButton3Released);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton4, EInputEvent::IE_Pressed, this, &UHand::FaceButton4Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton4, EInputEvent::IE_Released, this, &UHand::FaceButton4Released);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton5, EInputEvent::IE_Pressed, this, &UHand::FaceButton5Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton5, EInputEvent::IE_Released, this, &UHand::FaceButton5Released);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton6, EInputEvent::IE_Pressed, this, &UHand::FaceButton6Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton6, EInputEvent::IE_Released, this, &UHand::FaceButton6Released);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton7, EInputEvent::IE_Pressed, this, &UHand::FaceButton7Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton7, EInputEvent::IE_Released, this, &UHand::FaceButton7Released);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton8, EInputEvent::IE_Pressed, this, &UHand::FaceButton8Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_FaceButton8, EInputEvent::IE_Released, this, &UHand::FaceButton8Released);
+	InputComponent->BindAxisKey(EKeys::MotionController_Left_Grip1Axis, this, &UHand::Grip1Axis);
+	InputComponent->BindKey(EKeys::MotionController_Left_Grip1, EInputEvent::IE_Pressed, this, &UHand::Grip1Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Grip1, EInputEvent::IE_Released, this, &UHand::Grip1Released);
+	InputComponent->BindAxisKey(EKeys::MotionController_Left_Grip2Axis, this, &UHand::Grip2Axis);
+	InputComponent->BindKey(EKeys::MotionController_Left_Grip2, EInputEvent::IE_Pressed, this, &UHand::Grip2Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Grip2, EInputEvent::IE_Released, this, &UHand::Grip2Released);
+	InputComponent->BindKey(EKeys::MotionController_Left_Shoulder, EInputEvent::IE_Pressed, this, &UHand::ShoulderPressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Shoulder, EInputEvent::IE_Released, this, &UHand::ShoulderReleased);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick, EInputEvent::IE_Pressed, this, &UHand::ThumbstickPressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick, EInputEvent::IE_Released, this, &UHand::ThumbstickReleased);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick_Down, EInputEvent::IE_Pressed, this, &UHand::ThumbstickDownPressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick_Down, EInputEvent::IE_Released, this, &UHand::ThumbstickDownReleased);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick_Left, EInputEvent::IE_Pressed, this, &UHand::ThumbstickLeftPressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick_Left, EInputEvent::IE_Released, this, &UHand::ThumbstickLeftReleased);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick_Right, EInputEvent::IE_Pressed, this, &UHand::ThumbstickRightPressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick_Right, EInputEvent::IE_Released, this, &UHand::ThumbstickRightReleased);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick_Up, EInputEvent::IE_Pressed, this, &UHand::ThumbstickUpPressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Thumbstick_Up, EInputEvent::IE_Released, this, &UHand::ThumbstickUpReleased);
+	InputComponent->BindAxisKey(EKeys::MotionController_Left_Thumbstick_X, this, &UHand::ThumbstickX);
+	InputComponent->BindAxisKey(EKeys::MotionController_Left_Thumbstick_Y, this, &UHand::ThumbstickY);
+	InputComponent->BindKey(EKeys::MotionController_Left_Trigger, EInputEvent::IE_Pressed, this, &UHand::TriggerPressed);
+	InputComponent->BindKey(EKeys::MotionController_Left_Trigger, EInputEvent::IE_Released, this, &UHand::TriggerReleased);
+	InputComponent->BindAxisKey(EKeys::MotionController_Left_TriggerAxis, this, &UHand::TriggerAxis);
+} else if (MotionController->Hand == EControllerHand::Right) {
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton1, EInputEvent::IE_Pressed, this, &UHand::FaceButton1Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton1, EInputEvent::IE_Released, this, &UHand::FaceButton1Released);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton2, EInputEvent::IE_Pressed, this, &UHand::FaceButton2Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton2, EInputEvent::IE_Released, this, &UHand::FaceButton2Released);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton3, EInputEvent::IE_Pressed, this, &UHand::FaceButton3Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton3, EInputEvent::IE_Released, this, &UHand::FaceButton3Released);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton4, EInputEvent::IE_Pressed, this, &UHand::FaceButton4Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton4, EInputEvent::IE_Released, this, &UHand::FaceButton4Released);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton5, EInputEvent::IE_Pressed, this, &UHand::FaceButton5Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton5, EInputEvent::IE_Released, this, &UHand::FaceButton5Released);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton6, EInputEvent::IE_Pressed, this, &UHand::FaceButton6Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton6, EInputEvent::IE_Released, this, &UHand::FaceButton6Released);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton7, EInputEvent::IE_Pressed, this, &UHand::FaceButton7Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton7, EInputEvent::IE_Released, this, &UHand::FaceButton7Released);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton8, EInputEvent::IE_Pressed, this, &UHand::FaceButton8Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_FaceButton8, EInputEvent::IE_Released, this, &UHand::FaceButton8Released);
+	InputComponent->BindAxisKey(EKeys::MotionController_Right_Grip1Axis, this, &UHand::Grip1Axis);
+	InputComponent->BindKey(EKeys::MotionController_Right_Grip1, EInputEvent::IE_Pressed, this, &UHand::Grip1Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Grip1, EInputEvent::IE_Released, this, &UHand::Grip1Released);
+	InputComponent->BindAxisKey(EKeys::MotionController_Right_Grip2Axis, this, &UHand::Grip2Axis);
+	InputComponent->BindKey(EKeys::MotionController_Right_Grip2, EInputEvent::IE_Pressed, this, &UHand::Grip2Pressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Grip2, EInputEvent::IE_Released, this, &UHand::Grip2Released);
+	InputComponent->BindKey(EKeys::MotionController_Right_Shoulder, EInputEvent::IE_Pressed, this, &UHand::ShoulderPressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Shoulder, EInputEvent::IE_Released, this, &UHand::ShoulderReleased);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick, EInputEvent::IE_Pressed, this, &UHand::ThumbstickPressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick, EInputEvent::IE_Released, this, &UHand::ThumbstickReleased);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick_Down, EInputEvent::IE_Pressed, this, &UHand::ThumbstickDownPressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick_Down, EInputEvent::IE_Released, this, &UHand::ThumbstickDownReleased);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick_Left, EInputEvent::IE_Pressed, this, &UHand::ThumbstickLeftPressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick_Left, EInputEvent::IE_Released, this, &UHand::ThumbstickLeftReleased);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick_Right, EInputEvent::IE_Pressed, this, &UHand::ThumbstickRightPressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick_Right, EInputEvent::IE_Released, this, &UHand::ThumbstickRightReleased);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick_Up, EInputEvent::IE_Pressed, this, &UHand::ThumbstickUpPressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Thumbstick_Up, EInputEvent::IE_Released, this, &UHand::ThumbstickUpReleased);
+	InputComponent->BindAxisKey(EKeys::MotionController_Right_Thumbstick_X, this, &UHand::ThumbstickX);
+	InputComponent->BindAxisKey(EKeys::MotionController_Right_Thumbstick_Y, this, &UHand::ThumbstickY);
+	InputComponent->BindKey(EKeys::MotionController_Right_Trigger, EInputEvent::IE_Pressed, this, &UHand::TriggerPressed);
+	InputComponent->BindKey(EKeys::MotionController_Right_Trigger, EInputEvent::IE_Released, this, &UHand::TriggerReleased);
+	InputComponent->BindAxisKey(EKeys::MotionController_Right_TriggerAxis, this, &UHand::TriggerAxis);
+}
+
+//==============================================================================
+// Empty Implementation Headers
+//==============================================================================
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton1Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton1Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton2Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton2Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton3Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton3Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton4Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton4Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton5Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton5Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton6Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton6Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton7Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton7Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton8Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void FaceButton8Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void Grip1Axis(float AxisValue);
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void Grip1Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void Grip1Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void Grip2Axis(float AxisValue);
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void Grip2Pressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void Grip2Released();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ShoulderPressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ShoulderReleased();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickPressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickReleased();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickDownPressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickDownReleased();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickLeftPressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickLeftReleased();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickRightPressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickRightReleased();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickUpPressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickUpReleased();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickX(float AxisValue);
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void ThumbstickY(float AxisValue);
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void TriggerPressed();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void TriggerReleased();
+
+UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+void TriggerAxis(float AxisValue);
+
+//==============================================================================
+// Hand Passthroughs
+//==============================================================================
+
+void UHand::FaceButton1Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton1Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton1Pressed();
+    }
+}
+
+void UHand::FaceButton1Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton1Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton1Released();
+    }
+}
+
+void UHand::FaceButton2Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton2Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton2Pressed();
+    }
+}
+
+void UHand::FaceButton2Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton2Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton2Released();
+    }
+}
+
+void UHand::FaceButton3Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton3Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton3Pressed();
+    }
+}
+
+void UHand::FaceButton3Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton3Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton3Released();
+    }
+}
+
+void UHand::FaceButton4Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton4Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton4Pressed();
+    }
+}
+
+void UHand::FaceButton4Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton4Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton4Released();
+    }
+}
+
+void UHand::FaceButton5Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton5Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton5Pressed();
+    }
+}
+
+void UHand::FaceButton5Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton5Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton5Released();
+    }
+}
+
+void UHand::FaceButton6Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton6Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton6Pressed();
+    }
+}
+
+void UHand::FaceButton6Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton6Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton6Released();
+    }
+}
+
+void UHand::FaceButton7Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton7Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton7Pressed();
+    }
+}
+
+void UHand::FaceButton7Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton7Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton7Released();
+    }
+}
+
+void UHand::FaceButton8Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton8Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton8Pressed();
+    }
+}
+
+void UHand::FaceButton8Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->FaceButton8Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->FaceButton8Released();
+    }
+}
+
+void UHand::Grip1Axis_Implementation(float AxisValue) {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->Grip1Axis(AxisValue);
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->Grip1Axis(AxisValue);
+    }
+}
+
+void UHand::Grip1Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->Grip1Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->Grip1Pressed();
+    }
+}
+
+void UHand::Grip1Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->Grip1Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->Grip1Released();
+    }
+}
+
+void UHand::Grip2Axis_Implementation(float AxisValue) {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->Grip2Axis(AxisValue);
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->Grip2Axis(AxisValue);
+    }
+}
+
+void UHand::Grip2Pressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->Grip2Pressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->Grip2Pressed();
+    }
+}
+
+void UHand::Grip2Released_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->Grip2Released();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->Grip2Released();
+    }
+}
+
+void UHand::ShoulderPressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ShoulderPressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ShoulderPressed();
+    }
+}
+
+void UHand::ShoulderReleased_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ShoulderReleased();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ShoulderReleased();
+    }
+}
+
+void UHand::ThumbstickPressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickPressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickPressed();
+    }
+}
+
+void UHand::ThumbstickReleased_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickReleased();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickReleased();
+    }
+}
+
+void UHand::ThumbstickDownPressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickDownPressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickDownPressed();
+    }
+}
+
+void UHand::ThumbstickDownReleased_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickDownReleased();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickDownReleased();
+    }
+}
+
+void UHand::ThumbstickLeftPressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickLeftPressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickLeftPressed();
+    }
+}
+
+void UHand::ThumbstickLeftReleased_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickLeftReleased();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickLeftReleased();
+    }
+}
+
+void UHand::ThumbstickRightPressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickRightPressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickRightPressed();
+    }
+}
+
+void UHand::ThumbstickRightReleased_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickRightReleased();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickRightReleased();
+    }
+}
+
+void UHand::ThumbstickUpPressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickUpPressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickUpPressed();
+    }
+}
+
+void UHand::ThumbstickUpReleased_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickUpReleased();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickUpReleased();
+    }
+}
+
+void UHand::ThumbstickX_Implementation(float AxisValue) {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickX(AxisValue);
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickX(AxisValue);
+    }
+}
+
+void UHand::ThumbstickY_Implementation(float AxisValue) {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->ThumbstickY(AxisValue);
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->ThumbstickY(AxisValue);
+    }
+}
+
+void UHand::TriggerPressed_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->TriggerPressed();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->TriggerPressed();
+    }
+}
+
+void UHand::TriggerReleased_Implementation() {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->TriggerReleased();
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->TriggerReleased();
+    }
+}
+
+void UHand::TriggerAxis_Implementation(float AxisValue) {
+    if (Interacting->IsValidLowLevel()) {
+        Interacting->TriggerAxis(AxisValue);
+    } else if (Grabbed->IsValidLowLevel()) {
+        Grabbed->TriggerAxis(AxisValue);
+    }
+}
+

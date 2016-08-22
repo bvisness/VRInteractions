@@ -1,0 +1,71 @@
+# Some defines for the hand code
+HAND_CLASS = UHand
+
+# Defines for UFUNCTION headers
+HAND_UFUNCTION = UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "VR|Interactions")
+EMPTY_IMPLEMENTATION_UFUNCTION = UFUNCTION(BlueprintImplementableEvent, Category = "VR|Interactions")
+
+# These are all the motion controller events. If there is a comment after the
+# method signature, that is the EKeys version of that event, for use in
+# setting up input bindings.
+# 
+# See https://docs.unrealengine.com/latest/INT/API/Runtime/InputCore/EKeys/index.html
+FaceButton1Pressed();
+FaceButton1Released();
+
+FaceButton2Pressed();
+FaceButton2Released();
+
+FaceButton3Pressed();
+FaceButton3Released();
+
+FaceButton4Pressed();
+FaceButton4Released();
+
+FaceButton5Pressed();
+FaceButton5Released();
+
+FaceButton6Pressed();
+FaceButton6Released();
+
+FaceButton7Pressed();
+FaceButton7Released();
+
+FaceButton8Pressed();
+FaceButton8Released();
+
+Grip1Axis(float AxisValue);
+
+Grip1Pressed();
+Grip1Released();
+
+Grip2Axis(float AxisValue);
+
+Grip2Pressed();
+Grip2Released();
+
+ShoulderPressed();
+ShoulderReleased();
+
+ThumbstickPressed();
+ThumbstickReleased();
+
+ThumbstickDownPressed(); # Thumbstick_Down
+ThumbstickDownReleased(); # Thumbstick_Down
+
+ThumbstickLeftPressed(); # Thumbstick_Left
+ThumbstickLeftReleased(); # Thumbstick_Left
+
+ThumbstickRightPressed(); # Thumbstick_Right
+ThumbstickRightReleased(); # Thumbstick_Right
+
+ThumbstickUpPressed(); # Thumbstick_Up
+ThumbstickUpReleased(); # Thumbstick_Up
+
+ThumbstickX(float AxisValue); # Thumbstick_X
+ThumbstickY(float AxisValue); # Thumbstick_Y
+
+TriggerPressed();
+TriggerReleased();
+
+TriggerAxis(float AxisValue);
